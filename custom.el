@@ -7,7 +7,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (emmet-mode web-mode markdown-mode haml-mode yaml-mode define-word powerthesaurus flyspell-correct-popup flyspell-correct company shell-pop git-gutter magit with-editor which-key visual-regexp vi-tilde-fringe use-package undo-tree smex smartparens simpleclip rich-minority neotree multiple-cursors move-text magit-popup ivy-rich flx expand-region exec-path-from-shell counsel-projectile avy all-the-icons)))
+    (cider clojure-mode cider-eval-sexp-fu emmet-mode web-mode markdown-mode haml-mode yaml-mode define-word powerthesaurus flyspell-correct-popup flyspell-correct company shell-pop git-gutter magit with-editor which-key visual-regexp vi-tilde-fringe use-package undo-tree smex smartparens simpleclip rich-minority neotree multiple-cursors move-text magit-popup ivy-rich flx expand-region exec-path-from-shell counsel-projectile avy all-the-icons)))
  '(shell-pop-shell-type
    (quote
     ("ansi-term" "*ansi-term*"

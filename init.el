@@ -696,5 +696,37 @@ point reaches the beginning or end of the buffer, stop there."
 ;; Contain custom settings to private.el to ensure easy Castlemacs updates.
 (global-set-key (kbd "C-x c") (lambda () (interactive) (find-file "~/.emacs.d/private.el")))
 
+
+;; ========
+;; CLOJURE
+
+(use-package clojure-mode)
+(use-package cider)
+(use-package cider-eval-sexp-fu :ensure t)
+
+(setq nrepl-log-messages t)
+(setq cider-show-error-buffer nil)
+(setq cider-repl-display-in-current-window nil)
+(setq cider-prompt-save-file-on-load nil)
+(add-hook 'cider-mode-hook #'eldoc-mode)
+(add-hook 'cider-mode-hook '(lambda () (setq mode-name "clj")))
+(setq cider-repl-pop-to-buffer-on-connect nil)
+
+(defun clojure-mode-keys ()
+  (local-set-key (kbd "C-c C-+") 'cider-jack-in)
+  (local-set-key (kbd "C-c C-#") 'cider-jack-in-clojurescript)
+  (local-set-key (kbd "C-c j") 'cider-eval-defun-at-point)
+  (local-set-key (kbd "C-c k") 'cider-eval-last-sexp)
+  (local-set-key (kbd "C-c b") 'cider-eval-buffer)
+  (local-set-key (kbd "C-c C-j") 'cider-eval-region)
+  (local-set-key (kbd "C-c +") 'cider-doc))
+
+(add-hook 'clojure-mode-hook 'clojure-mode-keys)
+
+(add-to-list 'auto-mode-alist '("\\.edn\\'" . clojure-mode))
+(add-to-list 'auto-mode-alist '("\\.dtm\\'" . clojure-mode))
+(add-to-list 'auto-mode-alist '("\\.cljx\\'" . clojure-mode))
+(add-to-list 'auto-mode-alist '("\\Gruntfile\\'" . js2-mode))
+
 ;; =======
 ;; THE END
