@@ -282,6 +282,8 @@
 (global-set-key (kbd "s-j") 'left-char)
 (global-set-key (kbd "s-l") 'right-char)
 
+(global-set-key (kbd "C-s-l") 'forward-word)
+(global-set-key (kbd "C-s-j") 'backward-word)
 
 ;; Kill line with CMD-Backspace. Note that thanks to Simpleclip, killing doesn't rewrite the system clipboard.
 ;; Kill one word with Alt+Backspace.
