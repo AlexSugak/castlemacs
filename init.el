@@ -633,6 +633,7 @@ point reaches the beginning or end of the buffer, stop there."
 (use-package yaml-mode)
 (use-package haml-mode)
 (use-package markdown-mode)
+(use-package jade-mode)
 
 
 ;; Web-mode is an autonomous emacs major-mode for editing web templates.
